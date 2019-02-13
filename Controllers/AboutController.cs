@@ -3,19 +3,27 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Fisher.Bookstore.Controllers
 {
+    [Route("about")]
     public class AboutController : Controller
     {
+
+        [Route("")]
+        [Route("index")]
         public IActionResult Index()
         {
-            return Content("About -- Fisher Bookstore Index");
+            return View();
         }
+
+        [Route("history")]
         public IActionResult History()
         {
-            return Content("About the History of the Fisher Bookstore");
+            return View();
         }
+
+        [Route("location")]
         public IActionResult Location()
         {
-            return Content("About the Location of the Fisher Bookstore");
+            return View();
         }
     }
 }

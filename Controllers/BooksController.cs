@@ -3,21 +3,26 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Fisher.Bookstore.Controllers
 {
+    [Route("books")]
     public class BooksController : Controller
     {
+        [Route("")]
+        [Route("index")]
         public IActionResult Index()
         {
-            return Content("Books -- Fisher Bookstore Index");
+            return View();
         }
+
+        [Route("new")]
         public IActionResult New()
         {
-            return Content("New Books at the Fisher Bookstore");
+            return View();
         }
         
-        [ActionName("best-sellers")]
+        [Route("best-sellers")]
         public IActionResult BestSellers()
         {
-            return Content("Fisher Bookstore Best Sellers");
+            return View();
         }
     }
 }
